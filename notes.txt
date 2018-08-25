@@ -1,0 +1,30 @@
+Notes:
+
+Using pipes to format strings
+
+[(ngModel)] is Angular's two-way data binding syntax (data flows in and out)
+ex:  <input [(ngModel)]="hero.name" placeholder="name">
+--- in app.module.ts:
+import { FormsModule } from '@angular/forms';
+@NgModule
+imports: [
+...
+  FormsModule
+],
+
+Important! Every component must be declared in *exactly* one NgModule. This is done automatically when adding a component in using the Angular CLI. https://angular.io/tutorial/toh-pt1
+
+Repeating a list:
+	<li *ngFor="let hero of heroes">
+		<span class="badge">{{hero.id}}</span> {{hero.name}}
+	</li>
+
+Event syntax: (click)="functionName(params)"
+ex: <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+
+Don't desplay elements if they're undefined
+<div *ngIf="selectedHero">...</div>
+
+CSS-Class binding
+[class.some-css-class]="some-condition"
+ex: [class.selected]="hero === selectedHero"

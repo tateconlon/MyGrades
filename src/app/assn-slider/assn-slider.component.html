@@ -1,0 +1,11 @@
+<div>
+  <p>
+    {{assn.mark}}
+  </p>
+<mat-slider vertical [(ngModel)]="assn.mark" [disabled]="assn.isLocked"></mat-slider>
+<p>
+{{assn.name}}
+</p>
+<mat-checkbox [(ngModel)]="assn.isLocked">L</mat-checkbox>
+{{assn.isLocked}}
+</div>

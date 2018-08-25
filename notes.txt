@@ -28,3 +28,13 @@ Don't desplay elements if they're undefined
 CSS-Class binding
 [class.some-css-class]="some-condition"
 ex: [class.selected]="hero === selectedHero"
+
+Property binding: []
+<app-my-other-component [otherComponentProp]="thisClassesProp"></...>
+Need to set property as @Input() propName: propClass; 
+(need to import Input from @angular/core)
+This allows the hero to be inputted from somehwere else.
+
+HttpClient.get() returns an Observable
+
+Services can be injected into classes. Services are basically singletons

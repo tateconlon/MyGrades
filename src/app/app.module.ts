@@ -15,7 +15,7 @@ import { MessagesComponent } from './messages/messages.component';
   declarations: [
     AppComponent,
     HeroesComponent,
-    SliderComponent
+    SliderComponent,
     HeroDetailComponent,
     MessagesComponent,
   ],

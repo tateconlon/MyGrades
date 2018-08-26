@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog, MatDialogConfig} from '@angular/material';
 import { Course } from '../course';
 import { CourseService } from '../course.service';
+import { AssnDialogueComponent } from '../assn-dialogue/assn-dialogue.component';
 
 @Component({
   selector: 'app-course-comp',
@@ -11,7 +13,19 @@ export class CourseCompComponent implements OnInit {
 
   course: Course;
 
-  constructor(private courseService: CourseService){ }
+  constructor(private courseService: CourseService, private dialog: MatDialog){ }
+
+  openDialog() {
+
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+
+    this.dialog.open(AssnDialogueComponent, dialogConfig);
+  }
+
+
 
   getCourse(): void {
     this.courseService.getCourse()

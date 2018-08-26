@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Assn } from '../assn';
 
 @Component({
@@ -7,9 +7,20 @@ import { Assn } from '../assn';
   styleUrls: ['./assn-slider.component.css']
 })
 export class AssnSliderComponent implements OnInit {
+  //@Input() assn: Assn;
   assn: Assn = new Assn();
-  constructor() {}
+//  @Output() assnChange = EventEmitter<Assn>();
+  //@Input() var changedFunc: () => void;
+  constructor() {
+}
   ngOnInit() {
   }
+
+   f(event:any) : void {
+     //changedFunc();
+     console.log(event);
+    this.assn.mark = event.value;
+   }
+
 
 }

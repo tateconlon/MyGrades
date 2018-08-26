@@ -10,6 +10,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AssnSliderComponent } from './assn-slider/assn-slider.component';
+import { CourseCompComponent } from './course-comp/course-comp.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AssnSliderComponent } from './assn-slider/assn-slider.component';
     HeroDetailComponent,
     MessagesComponent,
     AssnSliderComponent,
+    CourseCompComponent,
   ],
   imports: [
     BrowserModule,

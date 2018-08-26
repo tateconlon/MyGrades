@@ -2,7 +2,7 @@
   <p>
     {{assn.mark}}
   </p>
-<mat-slider vertical [(ngModel)]="assn.mark" [disabled]="assn.isLocked"></mat-slider>
+<mat-slider vertical [(ngModel)]="assn.mark" [disabled]="assn.isLocked" (input)="f($event)"></mat-slider>
 <p>
 {{assn.name}}
 </p>

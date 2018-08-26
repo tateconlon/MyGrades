@@ -1,9 +1,13 @@
 <p>
   {{course.currentMark}}
 </p>
-<ul>
-  <li *ngFor="let a of course.assignments">
-    <app-assn-slider (notify)='recalculate($event)' [assn]="a"></app-assn-slider>
-  </li>
-</ul>
+<table>
+  <tr>
+    <td *ngFor="let a of course.assignments">
+      <app-assn-slider (notify)='recalculate($event)' [assn]="a"></app-assn-slider>
+    <td>
+  </tr>
+</table>
+<button mat-flat-button>SAVE</button>
+<button mat-flat-button>LOAD</button>
 <!-- <app-assn-slider (notify)='recalculate($event)'></app-assn-slider> -->

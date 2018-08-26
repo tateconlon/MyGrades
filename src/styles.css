@@ -1,7 +1,7 @@
 /* Application-wide Style*/
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 h1 {
-  color: #369;
+  color: green;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
@@ -18,7 +18,7 @@ body, input[text], button {
   font-family: Cambria, Georgia;
 }
 li {
-  display:inline;
+  display: inline;
 }
 /* everywhere else */
 * {

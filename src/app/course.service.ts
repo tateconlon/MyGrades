@@ -8,10 +8,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CourseService {
-  private courseURL = 'api/Course'; //URL to web api
+  private courseURL = 'https://mediquix.lib.id/mygrades@0.0.0/getCourse/?name=Isaiah&courseName=Calc'; //URL to web api
 
   getCourse(): Observable<Course>{
-     return of(COURSE);
+    return of(COURSE);
     //return this.http.get<Course>(this.courseURL)
   }
 

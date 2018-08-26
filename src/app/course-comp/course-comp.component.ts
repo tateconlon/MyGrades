@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../course';
+import { CourseService } from '../course.service';
 
 @Component({
   selector: 'app-course-comp',
@@ -8,19 +9,15 @@ import { Course } from '../course';
 })
 export class CourseCompComponent implements OnInit {
 
-  course: Course = new Course();
+  course: Course;
 
-//const lib = require('lib');
-//
-// lib.username.bestTrekChar['@0.0.0']({name: 'spock'}, function (err, result) {
-//
-//   if (err) {
-//     // handle it
-//   }
-//
-//   // do something with result
-//
-// });
+  constructor(private courseService: CourseService){ }
+
+  getCourse(): void {
+    this.courseService.getCourse()
+    .subscribe(course => this.course = course);
+  }
+
 
   recalculate():void {
     console.log('test');
@@ -34,9 +31,8 @@ export class CourseCompComponent implements OnInit {
     this.course.currentMark = avg;
 }
 
-  constructor() { }
-
   ngOnInit() {
+    this.getCourse();
   }
 
   something() : void {
@@ -44,3 +40,14 @@ export class CourseCompComponent implements OnInit {
   }
 
 }
+//const lib = require('lib');
+//
+// lib.username.bestTrekChar['@0.0.0']({name: 'spock'}, function (err, result) {
+//
+//   if (err) {
+//     // handle it
+//   }
+//
+//   // do something with result
+//
+// });

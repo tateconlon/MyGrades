@@ -13,9 +13,13 @@ export class CourseCompComponent implements OnInit {
   recalculate():void {
     console.log('test');
     //iterate through the list and recalculate currentMark
+    let avg: number = 0;
+    for(let ass of this.course.assignments) {
+    avg += ass.mark * ass.weight;
+  }
 
     //avg = avg + (a.mark*a.weight);
-    //course.currentMark = avg;
+    this.course.currentMark = avg;
 }
 
   constructor() { }

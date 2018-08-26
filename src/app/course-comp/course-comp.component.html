@@ -1,9 +1,9 @@
 <p>
-  <!-- {{course.currentMark}} -->
+  {{course.currentMark}}
 </p>
-<!-- <ul> -->
-  <!--li *ngFor="let a of course.assignments">
-    <!app-assn-slider [(assn)]="a"></app-assn-slider>
-  </li-->
-<!-- </ul> -->
-<app-assn-slider (notify)='recalculate($event)'></app-assn-slider>
+<ul>
+  <li *ngFor="let a of course.assignments">
+    <app-assn-slider (notify)='recalculate($event)' [assn]="a"></app-assn-slider>
+  </li>
+</ul>
+<!-- <app-assn-slider (notify)='recalculate($event)'></app-assn-slider> -->

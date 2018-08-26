@@ -7,8 +7,8 @@ import { Assn } from '../assn';
   styleUrls: ['./assn-slider.component.css']
 })
 export class AssnSliderComponent implements OnInit {
-  //@Input() assn: Assn;
-  assn: Assn = new Assn();
+  @Input() assn: Assn;
+  //assn: Assn = new Assn();
   @Output() notify = new EventEmitter<any>();
   /*@Input()*/ //changedFunc: () => void;
   constructor() {

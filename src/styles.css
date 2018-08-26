@@ -17,6 +17,9 @@ body, input[text], button {
   color: #888;
   font-family: Cambria, Georgia;
 }
+li {
+  display:inline;
+}
 /* everywhere else */
 * {
   font-family: Arial, Helvetica, sans-serif;

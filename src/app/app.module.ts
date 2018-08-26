@@ -12,6 +12,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { AssnSliderComponent } from './assn-slider/assn-slider.component';
 import { CourseCompComponent } from './course-comp/course-comp.component';
 import { AssnDialogueComponent, DialogOverviewExampleDialog } from './assn-dialogue/assn-dialogue.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AssnDialogueComponent, DialogOverviewExampleDialog } from './assn-dialo
     MatDialog,
     FormsModule,
     MatDialogRef,
-    ,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

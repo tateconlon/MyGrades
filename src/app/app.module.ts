@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatButtonToggleModule, MatCheckboxModule, MatSliderModule, MatDialog, MatDialogRef} from '@angular/material';
+import {MatButtonModule, MatButtonToggleModule, MatCheckboxModule, MatSliderModule, MatDialogModule} from '@angular/material';
 import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
@@ -11,7 +11,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AssnSliderComponent } from './assn-slider/assn-slider.component';
 import { CourseCompComponent } from './course-comp/course-comp.component';
-import { AssnDialogueComponent, DialogOverviewExampleDialog } from './assn-dialogue/assn-dialogue.component';
+import { AssnDialogueComponent } from './assn-dialogue/assn-dialogue.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -22,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     MessagesComponent,
     AssnSliderComponent,
     CourseCompComponent,
-    AssnDialogueComponent,  ],
+    AssnDialogueComponent
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -30,13 +31,13 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonToggleModule,
     MatSliderModule,
     MatCheckboxModule,
-    MatDialog,
+    MatDialogModule,
     FormsModule,
-    MatDialogRef,
     FormsModule,
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AssnDialogueComponent]
 })
 export class AppModule { }

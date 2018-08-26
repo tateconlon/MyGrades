@@ -10,6 +10,14 @@ export class CourseCompComponent implements OnInit {
 
   course: Course = new Course();
 
+  recalculate():void {
+    console.log('test');
+    //iterate through the list and recalculate currentMark
+
+    //avg = avg + (a.mark*a.weight);
+    //course.currentMark = avg;
+}
+
   constructor() { }
 
   ngOnInit() {
